@@ -57,14 +57,11 @@ img {
     margin-top:5rem;
    
 }
-#msgid{
-    font-size : 2rem;
-    /* margin-top: 10rem; */
+#msgid {
+    font-size: 2rem;
     background-color: black;
     color: white;
-    display: inline;
+    display: inline-block;
     border-radius: 1rem;
-   padding:1rem;
-    
-  
+    padding: 1rem;
 }
