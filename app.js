@@ -16,3 +16,18 @@ choices.forEach((choice) => {
         console.log(userChoice, compChoice);
     });
 });
+
+const decideWinner = (userChoice, compChoice) => {
+    if (userChoice === compChoice) {
+        return "tie";
+    } else if (
+        (userChoice === "rock" && compChoice === "scissors") ||
+        (userChoice === "scissors" && compChoice === "paper") ||
+        (userChoice === "paper" && compChoice === "rock")
+    ) {
+        return "user";
+    } else {
+        return "computer";
+    }
+};
+
