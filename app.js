@@ -45,3 +45,12 @@ const decideWinner = (userChoice, compChoice) => {
     }
 };
 
+document.getElementById("resetBtn").addEventListener("click", () => {
+    userScore = 0;
+    compScore = 0;
+    document.getElementById("you").textContent = userScore;
+    document.getElementById("comp").textContent = compScore;
+    document.getElementById("msgid").textContent = "Game reset!";
+});
+
+
