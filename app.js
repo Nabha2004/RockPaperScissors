@@ -13,9 +13,12 @@ choices.forEach((choice) => {
     choice.addEventListener("click", () => {
         const userChoice = choice.id.toLowerCase();
         const compChoice = genCompChoice();
-        console.log(userChoice, compChoice);
+        const winner = decideWinner(userChoice, compChoice);
+        console.log(`User chose ${userChoice}, Computer chose ${compChoice}. Winner: ${winner}`);
     });
 });
+
+
 
 const decideWinner = (userChoice, compChoice) => {
     if (userChoice === compChoice) {
