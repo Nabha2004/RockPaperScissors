@@ -14,7 +14,18 @@ choices.forEach((choice) => {
         const userChoice = choice.id.toLowerCase();
         const compChoice = genCompChoice();
         const winner = decideWinner(userChoice, compChoice);
-        console.log(`User chose ${userChoice}, Computer chose ${compChoice}. Winner: ${winner}`);
+
+        // Update the result message
+        document.getElementById("msgid").textContent = `You chose ${userChoice}. Computer chose ${compChoice}. ${winner} wins!`;
+
+        // Update scores
+        if (winner === "user") {
+            userScore++;
+            document.getElementById("you").textContent = userScore;
+        } else if (winner === "computer") {
+            compScore++;
+            document.getElementById("comp").textContent = compScore;
+        }
     });
 });
 
